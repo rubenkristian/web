@@ -8,5 +8,5 @@ RUN go mod download && go mod verify
 COPY . .
 RUN go build -v -o /app ./
 
-EXPOSE 8000
+EXPOSE 80
 CMD ["./myweb"]
