@@ -14,4 +14,5 @@ FROM scratch
 
 COPY --from=builder /go/bin/app /go/bin/app
 
+EXPOSE 8080
 ENTRYPOINT ["/go/bin/app"]
