@@ -11,3 +11,13 @@ services:
       - "80:80"
     depends_on:
       - "goservice"
+  db:
+    image: "postgres:14-alpine"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=Starmoon0902
+      - POSTGRES_USER=rubenkristian
+      - POSTGRES_DB=legion
